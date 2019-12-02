@@ -4,6 +4,7 @@ function root() {
     show();
 }
 
+
 function adding(item) {
     const store = window.localStorage;
     const list = document.querySelector('#list');
@@ -19,7 +20,6 @@ function show() {
        const node = document.createRange().createContextualFragment(store.getItem(item));
     });
 };
-
 function update(yup) {
     if (yup.checked) {
         yup.setAttribute('checked', yup.checked);
@@ -65,5 +65,32 @@ function insert(event) {
     }
     todo.value = '';
 }
+ function removef(evt)
+ {
+    evt.preventDefault();
+    var ab = evt.currentTarget.parentNode.querySelector('input').id;
+     localStorage.removeItem(ab);
+     const item = evt.currentTarget.parentNode;
+     const list = item.parentNode;
+     list.removeChild(item);
+ }
+var anm = document.getElementById("tit");
+function animate()
+{
+    anm.style.animation = "pulse 4s 2"
+}
+anm.addEventListener("animationstart", startfunction);
+anm.addEventListener("animationend", endfunction);
 
+function startfunction()
+{
+    anm.style.backgroundColor ="pink";
+}
+
+
+function endfunction()
+{
+    anm.style.backgroundColor ="aqua";
+}
 root();
+

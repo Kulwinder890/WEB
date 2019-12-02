@@ -6,29 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To-Do List</title>
+    <script>
+        if ('serviceWorker' in navigator) {
+           window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+     
+    
 </head>
 <body>
-        <h1 id="tit">To Do List</h1>
-        
+        <h1 id="tit" onclick="anim()" >To Do List</h1>
+    
     <main>
-        <form class="bg-img" action="/" method="get">
-            <label for="todol" id="hed1"><h2>Add a To-Do</h2></label>
+        <form class="bg" action="/" method="get">
+            <h2>Add a To-Do</h2>
+            <label for="todol" id="hed1"></label>
             <input id="todol" type="text" name="todol">
             <button type="submit" id="add">ADDING TASKS</button>
             <ol id="list">
-                
+
             </ol>
             <template id="list-item">
                     <li>
                         <input id="todo-select" type="checkbox" name="todo-select" onclick="update(this)">
                         <label for="todo-select"></label>
+                <button type ="submit" id="del" onclick="removef(event)">Delete the tasks</button>
                     </li>
                 </template>
         </form>
-    </main>
+</main>
     <footer id="foo">
-            Copyright &copy;2019 developed by Kulwinder Singh
-        </footer>
+            Copyright &copy;2019 developed by Kulwinder Singh </footer>
         <script src="js/index.js"></script>
 </body>
 </html>

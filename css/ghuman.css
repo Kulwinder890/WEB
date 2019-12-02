@@ -3,24 +3,55 @@ html{
     font-size: calc(1rem + (3) * ((100vw - 300px) / (1080 - 300)));
            background-color: aqua;
        }
-
-       #tit:hover{
-           font-weight:900;
-           text-align: center;
-           color:brown;
-           font-weight: bold;
+       #tit{
+        animation-name: pulse;
+        animation-duration: 1.5s; 
+        animation-timing-function: ease-out; 
+        text-align: center;
        }
+
+       @keyframes pulse {
+        from {
+          height:200px;
+        }
+        to
+        {
+          height:100px;
+        }
+      }
+      #tit:hover{
+        color:brown;
+      }
+      #hed1{
+        animation-duration: 3s;
+        animation-name: slidein;
+      }
+      
+      @keyframes slidein {
+        from {
+          margin-left: 60%;
+          width: 200%; 
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
        #hed1:hover{
         text-decoration: underline;
        }
        
+  
+
    #foo{
        display: flex;
        justify-content:center;
        align-items: center;
        color: white;
        background-color: black;
-       height: 100px;
+      height:100px;
+      
    }
 
 
@@ -39,11 +70,26 @@ form{
     grid-gap: 10px;
     padding: 10px;
 }
+
 #todo-item{
     display: flex;
     flex-direction: column;
 }
-
 li>label::after{
     content: "!!";
+}
+
+#del{
+text-align: center;
+color:red;
+height: 50px;
+width:70px;
+margin-left: 50px;
+transition: width 3s;
+transition: height 2s;
+}
+#del:hover
+{
+  height: 80px;
+  width:100px;
 }
