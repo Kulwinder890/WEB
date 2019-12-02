@@ -23,6 +23,8 @@ html{
         color:brown;
       }
       #hed1{
+        font-weight: bold;
+        font-size: 30px;
         animation-duration: 3s;
         animation-name: slidein;
       }
