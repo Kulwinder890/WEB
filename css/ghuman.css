@@ -95,3 +95,23 @@ transition: height 2s;
   height: 80px;
   width:100px;
 }
+
+@media only screen and (max-width:800px){
+  html{
+    background-color: rgb(145, 241, 106);
+  }
+}
+
+@media only screen and (max-width:500px){
+  html{
+    background-color: red;
+  }
+}
+
+
+@media only screen and (max-width:600px){
+  form{
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
