@@ -2,8 +2,11 @@ html{
     box-sizing: border-box;
     font-size: calc(1rem + (3) * ((100vw - 300px) / (1080 - 300)));
            background-color: aqua;
+           color: var(--root-color);
        }
+       /*css*/
        #tit{
+        font-size: var(--root-size);
         animation-name: pulse;
         animation-duration: 1.5s; 
         animation-timing-function: ease-out; 
@@ -53,9 +56,9 @@ html{
        color: white;
        background-color: black;
       height:100px;
+      color: var(--root-color);
       
    }
-
 
 #but:hover{
     font-size: 60px;
@@ -80,7 +83,9 @@ form{
 li>label::after{
     content: "!!";
 }
-
+#add{
+  height:var(--root-height);
+}
 #del{
 text-align: center;
 color:red;
@@ -89,6 +94,8 @@ width:70px;
 margin-left: 50px;
 transition: width 3s;
 transition: height 2s;
+height:var(--root-height);
+  width:var(--root-width);
 }
 #del:hover
 {
@@ -114,4 +121,11 @@ transition: height 2s;
     font-size: 40px;
     font-weight: bold;
   }
+}
+
+:root{
+  --root-size:60px;
+  --root-height:2rem;
+  --root-width:6rem;
+  --root-color: rgb(53, 64, 224);
 }
