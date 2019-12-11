@@ -127,5 +127,5 @@ height:var(--root-height);
   --root-size:60px;
   --root-height:2rem;
   --root-width:6rem;
-  --root-color: rgb(53, 64, 224);
+  --root-color:yellow;
 }
