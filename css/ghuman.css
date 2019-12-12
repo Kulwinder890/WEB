@@ -4,7 +4,6 @@ html{
            background-color: aqua;
            color: var(--root-color);
        }
-       /*css*/
        #tit{
         font-size: var(--root-size);
         animation-name: pulse;

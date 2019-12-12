@@ -84,7 +84,7 @@ anm.addEventListener("animationend", endfunction);
 
 function startfunction()
 {
-    anm.style.backgroundColor ="pink";
+    anm.style.backgroundColor ="black";
 }
 
 
